@@ -35,8 +35,6 @@ Para executar a aplicação localmente, siga os passos abaixo:
 3. **Rode a aplicação utilizando o comando**:
    ```bash
       docker-compose up -d
-   
-    ```bash
       dotnet run --project src/FluxoCaixa.Application.WebApi
 
 4. **Considerações Finais**
