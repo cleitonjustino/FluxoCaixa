@@ -42,5 +42,4 @@ Melhorias Futuras: Para tornar o projeto mais robusto, considere as seguintes im
 - Adoção de um cache distribuído como Redis para melhorar a performance das consultas e geração dos relatórios com os dados frequentes.
 - Controle de mensageria em geração de relatórios, além de uma possível utilização de um novo microserviço para esta geração.
 - Monitoramento e observabilidade: Integrar ferramentas como Prometheus e Grafana para monitoramento de métricas e alertas em tempo real.
-**Outras Sugestões**:
 - Implementar Testes de Integração utilizando ferramentas como JMeter ou Postman para garantir a qualidade do código, número de requisições simultâneas e reduzir a ocorrência de bugs.
