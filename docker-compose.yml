@@ -5,7 +5,7 @@ services:
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: sqlserver
     environment:
-      SA_PASSWORD: "Senhasqlserver1234" 
+      SA_PASSWORD: "Senhasqlserver1234"
     ports:
       - "1433:1433" # Mapeia a porta 1433 para acesso externo
     volumes:
@@ -21,6 +21,17 @@ services:
       RABBITMQ_DEFAULT_USER: "guest"
       RABBITMQ_DEFAULT_PASS: "guest"
 
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017" # Porta padrão do MongoDB
+    volumes:
+      - mongodb-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "admin"
+      MONGO_INITDB_ROOT_PASSWORD: "adminpassword"
+
   webapp:
     build:
       context: . # Diretório onde está o Dockerfile
@@ -30,11 +41,14 @@ services:
     depends_on:
       - sqlserver
       - rabbitmq
+      - mongodb
     environment:
       ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=FluxoCaixa;User Id=sa;Password=Senhasqlserver1234;"
       RabbitMQ__Host: "rabbitmq"
       RabbitMQ__User: "guest"
       RabbitMQ__Password: "guest"
+      MongoDb__Connection: "mongodb://admin:adminpassword@mongodb:27017/FluxoCaixa"
 
 volumes:
   sqlserver-data:
+  mongodb-data:
