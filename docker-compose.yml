@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "Senhasqlserver1234" 
+    ports:
+      - "1433:1433" # Mapeia a porta 1433 para acesso externo
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" # Porta padrão do RabbitMQ
+      - "15672:15672" # Porta de gerenciamento
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+
+  webapp:
+    build:
+      context: . # Diretório onde está o Dockerfile
+    container_name: webapp
+    ports:
+      - "80:80" # Mapeia a porta 80 para acesso externo
+    depends_on:
+      - sqlserver
+      - rabbitmq
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=FluxoCaixa;User Id=sa;Password=Senhasqlserver1234;"
+      RabbitMQ__Host: "rabbitmq"
+      RabbitMQ__User: "guest"
+      RabbitMQ__Password: "guest"
+
+volumes:
+  sqlserver-data:

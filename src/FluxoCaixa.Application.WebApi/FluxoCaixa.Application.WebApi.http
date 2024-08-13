@@ -1,0 +1,6 @@
+@FluxoCaixa.Application.WebApi_HostAddress = http://localhost:5091
+
+GET {{FluxoCaixa.Application.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
