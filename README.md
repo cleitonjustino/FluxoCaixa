@@ -20,6 +20,8 @@ O projeto foi desenvolvido seguindo os princípios de Clean Architecture e Domai
 
 ![Desenho da Solução](https://github.com/cleitonjustino/FluxoCaixa/blob/main/documentos/Fluxo.png)
 
+![Desenho da Solução](https://github.com/cleitonjustino/FluxoCaixa/blob/main/documentos/FlxTechs.png)
+
 ## Executando o Projeto
 
 Para executar a aplicação localmente, siga os passos abaixo:
