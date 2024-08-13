@@ -23,10 +23,20 @@ Para executar a aplicação localmente, siga os passos abaixo:
    ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio
+Configure as variáveis de ambiente conforme necessário para o MongoDB e RabbitMQ.
 
-2. **Execute o docker-compose:
- ```bash
-docker-compose up --build
+2. **Rode a aplicação utilizando o comando:
 
-3. **Configure as variáveis de ambiente conforme necessário para o MongoDB e RabbitMQ.
+    ```bash
+      dotnet run --project src/FluxoCaixa.Application.WebApi
 
+3. **Considerações Finais
+Melhorias Futuras: Para tornar o projeto mais robusto, considere as seguintes implementações:
+
+Adoção de um cache distribuído como Redis para melhorar a performance das consultas de dados frequentes.
+Implementação de CQRS (Command Query Responsibility Segregation) para separar as operações de leitura e escrita, aumentando a escalabilidade e facilitando a manutenção.
+Monitoramento e observabilidade: Integrar ferramentas como Prometheus e Grafana para monitoramento de métricas e alertas em tempo real.
+Outras Sugestões:
+
+Utilizar Docker para facilitar o deploy e o ambiente de desenvolvimento, encapsulando a aplicação e suas dependências em containers.
+Implementar Testes de Integração utilizando ferramentas como xUnit e Moq para garantir a qualidade do código e reduzir a ocorrência de bugs.
