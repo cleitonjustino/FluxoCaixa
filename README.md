@@ -39,6 +39,8 @@ Para executar a aplicação localmente, siga os passos abaixo:
 
 4. **Considerações Finais**
 Melhorias Futuras: Para tornar o projeto mais robusto, considere as seguintes implementações:
+- Retorno de status code adequadamente
+- Uso de FluentValidator para validações de entrada
 - Adoção de um cache distribuído como Redis para melhorar a performance das consultas e geração dos relatórios com os dados frequentes.
 - Controle de mensageria em geração de relatórios, além de uma possível utilização de um novo microserviço para esta geração.
 - Monitoramento e observabilidade: Integrar ferramentas como Prometheus e Grafana para monitoramento de métricas e alertas em tempo real.
