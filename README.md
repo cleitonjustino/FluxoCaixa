@@ -18,7 +18,7 @@ A construção dos objetos no sistema é facilitada pelo uso do **Pattern Builde
 
 O projeto foi desenvolvido seguindo os princípios de Clean Architecture e Domain-Driven Design (DDD). A imagem abaixo ilustra a arquitetura utilizada:
 
-![Desenho da Solução](link-para-imagem)
+![Desenho da Solução](https://github.com/cleitonjustino/FluxoCaixa/blob/main/documentos/Fluxo.png)
 
 ## Executando o Projeto
 
