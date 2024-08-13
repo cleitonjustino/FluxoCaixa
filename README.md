@@ -40,7 +40,12 @@ Para executar a aplicação localmente, siga os passos abaixo:
       dotnet run --project src/FluxoCaixa.Application.WebApi
 
 4. **Endpoints**:
-   
+Os endpoints da aplicação são:
+- Lançamentos
+   ![Desenho da Solução](https://github.com/cleitonjustino/FluxoCaixa/blob/main/documentos/FluxoLancamento.png)
+- Relatórios
+   ![Desenho da Solução](https://github.com/cleitonjustino/FluxoCaixa/blob/main/documentos/Relatorio1.png)
+   ![Desenho da Solução](https://github.com/cleitonjustino/FluxoCaixa/blob/main/documentos/RelatorioPdf.png)
 
 4. **Considerações Finais**
 Melhorias Futuras: Para tornar o projeto mais robusto, considere as seguintes implementações:
