@@ -37,6 +37,9 @@ Para executar a aplicação localmente, siga os passos abaixo:
       docker-compose up -d
       dotnet run --project src/FluxoCaixa.Application.WebApi
 
+4. **Endpoints**:
+   
+
 4. **Considerações Finais**
 Melhorias Futuras: Para tornar o projeto mais robusto, considere as seguintes implementações:
 - Retorno de status code adequadamente
